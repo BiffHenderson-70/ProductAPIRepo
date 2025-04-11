@@ -4,10 +4,7 @@ using System.Threading.Tasks;
 using System.Web.Http.Results;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ProductsApp.Controllers;
-
 using ProductsApp.Models;
-
-
 
 namespace ProductsApp.Tests
 {
@@ -23,8 +20,6 @@ namespace ProductsApp.Tests
             Assert.AreEqual(testProducts.Length, result.Length);
         }
 
-
-
         [TestMethod]
         public void GetProduct_ShouldReturnCorrectProduct()
         {
@@ -35,7 +30,6 @@ namespace ProductsApp.Tests
             Assert.IsNotNull(result);
             Assert.AreEqual(testProducts[3].Name, result.Content.Name);
         }
-
 
         [TestMethod]
         public void GetProduct_ShouldNotFindProduct()
